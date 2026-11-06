@@ -1,9 +1,9 @@
 export const USERS = [
   {
     id: "u1",
-    name: "Daniel Goh",
-    email: "daniel@simplesystems.io",
-    password: "password123",
+    name: "Nexus Vuca",
+    email: "jialat007@tamjiak.com",
+    password: "password321",
     role: "admin",
   },
   {

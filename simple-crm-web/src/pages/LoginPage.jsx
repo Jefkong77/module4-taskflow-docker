@@ -88,7 +88,7 @@ function LoginPage() {
         </form>
 
         <p className={styles.hint}>
-          Try: daniel@simplesystems.io / password123
+          Try: jialat007@tamjiak.com / password321
         </p>
       </div>
     </div>
