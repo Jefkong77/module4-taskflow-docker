@@ -2,12 +2,23 @@
 
 The code is written and committed locally. It has **not been compiled yet**, because Claude's workspace cannot reach Maven Central or Docker Hub. Step 1 is the first real build, so send any error output back to Claude.
 
-Commands are for **PowerShell in the VS Code terminal** on Windows. In PowerShell, use `curl.exe`, not `curl`, which is an alias for something else.
-
 Before you start:
 
 - Docker Desktop is running.
 - You have accounts on GitHub, Docker Hub, Render and Netlify.
+
+## Where to type the commands
+
+Every command in a grey box goes into **VS Code's built-in terminal**:
+
+1. Unzip `module4-taskflow-docker.zip`, then open the `module4-taskflow-docker` folder in VS Code with **File > Open Folder**.
+2. Open the terminal with **Terminal > New Terminal**, or press **Ctrl + `** (the backtick key, left of 1). It opens at the bottom, already inside the repo folder, which is the "repo root".
+3. Check the shell's name on the right of the terminal panel. On Windows it should say **powershell**. If it says something else (cmd, bash), click the **˅** beside **+** and choose **PowerShell**.
+4. When a step says "in a second terminal", click the **+** to open another one. Leave the first one running.
+
+The `powershell` label at the top of each box only tells you which shell the command is for. Don't type it.
+
+In PowerShell, use `curl.exe`, not `curl`: plain `curl` runs a different PowerShell command.
 
 > **Decision needed before Step 3:** Render, Netlify and GitHub Actions all deploy *from GitHub*, so the code has to be pushed before Tasks 3 and 4 can happen. To keep to "don't submit until everything is done", create the repo as **Private**. Render, Netlify and Actions all work with private repos. Switch it to **Public** and submit the URL on NTU Learn only at the very end.
 
