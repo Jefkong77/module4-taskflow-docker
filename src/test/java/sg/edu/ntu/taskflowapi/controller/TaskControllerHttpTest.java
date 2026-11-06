@@ -20,7 +20,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /** Checks the task API through HTTP against an isolated Spring Boot server. */
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT,
-        properties = "spring.ai.openai.api-key=local-http-test-placeholder")
+        properties = {"spring.ai.openai.api-key=local-http-test-placeholder",
+                "app.seed-sample-tasks=false"})
 class TaskControllerHttpTest {
     @LocalServerPort
     private int port;

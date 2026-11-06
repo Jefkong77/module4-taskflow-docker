@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.*;
 /** Exercises Spring AI's HTTP client against a local test double, not a live LLM. */
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT,
         properties = {"spring.ai.openai.api-key=local-test-placeholder",
+                "app.seed-sample-tasks=false",
                 "spring.ai.openai.max-retries=0", "spring.ai.openai.timeout=5s"})
 class TaskSummaryHttpTest {
     private static final AtomicInteger calls = new AtomicInteger();

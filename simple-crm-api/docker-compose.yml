@@ -1,9 +1,9 @@
-name: lesson-4-11
+name: module4-crm
 
 services:
   db:
     image: postgres:16-alpine
-    container_name: lesson-4-11-db
+    container_name: module4-crm-db
     environment:
       POSTGRES_DB: simplecrmlite
       POSTGRES_USER: postgres
@@ -22,7 +22,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: lesson-4-11-app
+    container_name: module4-crm-api
     ports:
       - "8411:8080"
     environment:
