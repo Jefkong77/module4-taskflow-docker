@@ -1,0 +1,11 @@
+target/
+.git/
+.github/
+.vscode/
+.idea/
+docs/
+screenshots/
+frontend/
+*.log
+.env
+.env.*
