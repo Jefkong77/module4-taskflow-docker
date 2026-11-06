@@ -1,0 +1,7 @@
+# Module 4, Option 2: TaskFlow frontend on Netlify (base directory: frontend).
+# Set TASKFLOW_API_URL in Netlify > Site configuration > Environment variables,
+# e.g. https://taskflow-api-xxxx.onrender.com  (no trailing /api/tasks).
+[build]
+  base = "frontend"
+  publish = "."
+  command = "printf 'window.TASKFLOW_API_URL = \"%s\";\\n' \"$TASKFLOW_API_URL\" > config.js"

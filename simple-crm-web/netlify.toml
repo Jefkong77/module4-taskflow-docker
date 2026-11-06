@@ -1,0 +1,15 @@
+# Module 4, Option 3: Netlify build settings for the Simple CRM React app.
+# Set VITE_API_BASE_URL in Netlify > Site configuration > Environment variables.
+[build]
+  base = "simple-crm-web"
+  command = "npm ci && npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# React Router: send every path to index.html so refreshes on /app/... work.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
