@@ -20,10 +20,12 @@
   <suppress until="2027-05-01Z">
     <notes><![CDATA[
       CVE-2026-53914 (CVSS 9.8) is unsafe deserialization in the Kotlin compiler's
-      build-cache metadata. This app only ships the Kotlin runtime library
-      (transitive dependency); no Kotlin compilation or build cache is involved.
+      build-cache metadata. This app only ships Kotlin runtime libraries
+      (kotlin-stdlib, kotlin-stdlib-common, kotlin-reflect; transitive dependencies);
+      no Kotlin compilation or build cache is involved at runtime.
+      v1.1.1: widened from kotlin-stdlib* after the CI gate flagged kotlin-reflect.
     ]]></notes>
-    <packageUrl regex="true">^pkg:maven/org\.jetbrains\.kotlin/kotlin-stdlib(-common)?@.*$</packageUrl>
+    <packageUrl regex="true">^pkg:maven/org\.jetbrains\.kotlin/kotlin-(stdlib|stdlib-common|reflect)@.*$</packageUrl>
     <cve>CVE-2026-53914</cve>
   </suppress>
 
