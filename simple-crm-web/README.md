@@ -1,16 +1,17 @@
-# React + Vite
+# Simple CRM web (Module 4 · Option 3)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+My Module 2 Simple CRM React app (React 19 + Vite), now connected to the Simple CRM API on Render instead of json-server.
 
-Currently, two official plugins are available:
+- **Live:** https://jefkong-simple-crm.netlify.app (demo login: `jialat007@tamjiak.com` / `password321`)
+- **API:** https://simple-crm-api-0ge9.onrender.com/customers (source in [`../simple-crm-api`](../simple-crm-api))
+- **Full write-up, screenshots and errors:** see the [main README](../README.md#option-3--simple-crm-project-render--postgresql--netlify)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Run locally
 
-## React Compiler
+```bash
+npm ci
+export VITE_API_BASE_URL=http://localhost:8411   # the API from simple-crm-api/docker-compose.yml
+npm run dev                                       # http://localhost:5173
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+`VITE_API_BASE_URL` is built into the app at build time, so after changing it on Netlify you need to redeploy. Netlify build settings are in [`netlify.toml`](netlify.toml).
